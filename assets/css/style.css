@@ -1,0 +1,51 @@
+body,.jumbotron
+{
+    background-color: lightcyan;
+}
+.table, .card
+{
+    background-color: aliceblue;
+}
+.container
+{
+    max-width: 90%; 
+    height: 100vh;
+}
+.jumbotron img
+{
+    width : 10%;
+}
+/* .wide-col
+{
+    width: 50%;
+} */
+.table td
+ {
+    white-space: nowrap;
+    width: auto;
+}
+form
+{
+    /* color: blue; */
+    font-weight: bold;
+    font-size: small;
+}
+.mandatory-symbol
+{
+    color: red;
+}
+label
+{
+    margin-top : 5%;
+    margin-bottom: 0%;
+    padding : 0%;
+}
+/* Width for X remove button */
+.remove-btn
+{
+    width : 20px;
+}
+#currentTime
+{
+    float:right;
+}

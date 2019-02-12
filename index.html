@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bringing in Jquery and Bootstrap and also linking our js and css file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="jumbotron text-center p-0">
+        <h1 class="text-center">Train Scheduler </h1>
+        <img src="assets/images/Trian_giphy.gif" />
+
+    </div>
+    <div class="container m-0 p-0 ml-5">
+        <!-- Jumbotron -->
+        <div class="row">
+
+            <div class="card border-primary col-md-3 p-0 m-0">
+                <div class="card-header bg-info">
+                    <h4>Add Train details</h4>
+                </div>
+
+                <div class="card-body pt-2">
+                    <form id="form-content">
+
+                        <label for="trainName"> Train Name <span class="mandatory-symbol"> * </span></label>
+                        <input class="form-control" id="trainName" name="trainName" type="text" required />
+                        
+                        <label for="destination"> Destination <span class="mandatory-symbol"> * </span></label>
+                        <input class="form-control" id="destination" name="destination" type="text" required />
+                       
+                        <label for="firstTrain"> First Train Time (HH.mm - military time) <span class="mandatory-symbol"> * </span></label>
+                        <input class="form-control" id="firstTrain" name="frequency" type="text" required />
+
+                        <label for="frequency"> Frequency (mins) <span class="mandatory-symbol"> * </span></label>
+                        <input class="form-control" id="frequency" name="frequency" type="text" required />
+
+                        <input type="submit" value="Submit" id="submit-btn" class="btn btn-primary btn-sm mt-3 w-50" />
+                        <h5 id="user-msg" class="text-danger pt-4" hidden> Please enter an anime name </h5>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="col-md-1"></div>
+            <!--Column for  Question and answer and guess image -->
+            <div class="card border-primary w-100 col-md-8 p-0 m-0">
+                <div class="card-header bg-info">
+                    <h4> Train Schedule<span id="currentTime" class="text-warning"></span></h4>
+                </div>
+                <div class="card-body p-0 m-0 table-responsive">
+                    <table class="table text-primary table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th class="wide-col">Train Name</th>
+                                <th class="wide-col">Destination</th>
+                                <th>Frequency (min)</th>
+                                <th class="wide-col">Next Arrival</th>
+                                <th>Minutes Away</th>
+                                <th class="text-danger">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody id="trainDetails-content"></tbody>
+                    </table>
+                </div>
+            </div>
+            <!------------------------------------------------- -->
+
+        </div>
+    </div>
+</body>
+
+</html>
