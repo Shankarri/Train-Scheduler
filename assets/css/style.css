@@ -1,50 +1,82 @@
+/* Background color for the whole page*/
 body,.jumbotron
 {
     background-color: lightcyan;
 }
-.table, .card
+
+/* Main Header font style*/
+h1
 {
-    background-color: aliceblue;
+    font-family: 'Courgette', cursive;
+    font-size: 3rem;
 }
-.container
-{
-    max-width: 90%; 
-    height: 100vh;
-}
+
+/* Header Image size*/
 .jumbotron img
 {
     width : 10%;
 }
-/* .wide-col
+
+/* Container maximum size*/
+.container
 {
-    width: 50%;
-} */
+    max-width: 90%; 
+}
+
+/* Header inside container font style*/
+h4
+{
+    font-family: 'Teko', cursive;
+    font-size: 2rem;
+}
+
+/* Main content backgrond color */
+.table, .card
+{
+    background-color: aliceblue;
+}
+
+/* Smaller text box for getting hours and minutes */
+#firstTrainHour , #firstTrainMin
+{
+    width : 40px;  
+    margin-bottom: 10px;
+}
+
+/* Content align inside table cell*/
 .table td
  {
-    white-space: nowrap;
-    width: auto;
+    padding: 0% 2%;
+    vertical-align: middle;
 }
-form
+/* Few table columns like Train Name and destination to display more space */
+.wide-col
 {
-    /* color: blue; */
-    font-weight: bold;
-    font-size: small;
+    width: 55%;
 }
+
+/* Mandatory symbol to appear red*/
 .mandatory-symbol
 {
     color: red;
 }
+/* Form Label style  */
 label
 {
-    margin-top : 5%;
+    margin-top : 2%;
     margin-bottom: 0%;
-    padding : 0%;
+    padding : 1%;
+    font-weight: bold;
+    font-size: small;
 }
+
 /* Width for X remove button */
 .remove-btn
 {
     width : 20px;
 }
+
+/* Current time to display on the right corner of the table header */
 #currentTime
 {
     float:right;
